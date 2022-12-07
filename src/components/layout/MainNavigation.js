@@ -1,20 +1,23 @@
 import { Link } from "react-router-dom";
-import classes from "./MainNavigation.module.css";
+//import classes from "./MainNavigation.module.css";
 
 function MainNavigation()
 {
-    return <header className={classes.header}>
-        <div className={classes.logo}>
+    return( 
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div className="navbar-brand">
             React Meetups
         </div>
-        <nav>
-            <ul>
-                <li><Link to="/">All Meetups</Link></li>
-                <li><Link to="/new-meetup">New Meetups</Link></li>
-                <li><Link to="/favorites">Favorites</Link></li>
+        <div>
+            <ul className="navbar-nav">
+                <li className="navbar-item"><Link to="/" className="nav-link">All Meetups</Link></li>
+                <li className="navbar-item"><Link to="/new-meetup" className="nav-link">New Meetups</Link></li>
+                <li className="navbar-item"><Link to="/favorites" className="nav-link">Favorites</Link></li>
             </ul>
-        </nav>
-    </header>;
+        </div>
+
+    </nav>
+    );
 }
 
 export default MainNavigation;
