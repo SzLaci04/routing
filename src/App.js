@@ -8,6 +8,8 @@ import FavoritesPage from './pages/Favorites';
 import Layout from './components/layout/Layout';
 
 function App() {
+
+  
   return (
     <Layout>
       <Routes>

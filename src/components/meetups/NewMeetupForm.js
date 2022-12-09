@@ -5,6 +5,21 @@ import MeetupItem from "./MeetupItem";
 
 function NewMeetupForm(props)
 {
+
+    async function leker()
+    {
+        try
+        {
+            let eredmenyek2=await fetch("/Routing/routing/src/php/index.php/blogok");
+            let adatok=await eredmenyek2.json();
+            console.log(adatok);
+        }
+        catch(error)
+        {
+            console.log(error);
+        }
+    }
+
     const titleRef=useRef();
     const imgRef=useRef();
     const addressRef=useRef();
@@ -30,7 +45,7 @@ function NewMeetupForm(props)
 
     return(
         <Card>
-            <form onSubmit={sumbitHandler}>
+            <form onSubmit={sumbitHandler} onClick={leker}>
                 <div className="form-group">
                     <label htmlFor="title">Meetup title</label>
                     <input type="text" required id="title" className="form-control" ref={titleRef}/>

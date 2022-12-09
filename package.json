@@ -1,4 +1,5 @@
 {
+  "proxy": "http://localhost:80",
   "name": "routing",
   "version": "0.1.0",
   "private": true,
