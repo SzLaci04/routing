@@ -1,10 +1,12 @@
 import NewMeetupForm from "../components/meetups/NewMeetupForm";
+import { useNavigate} from "react-router-dom";
 
 function NewMeetupsPage()
 {
+    const navigate=useNavigate();
     async function addMeetup(meetupData)
     {
-        let eredmenyek= await fetch("https://react-tutorial-szlaci04-default-rtdb.europe-west1.firebasedatabase.app/meetups.json",
+        fetch("https://react-tutorial-szlaci04-default-rtdb.europe-west1.firebasedatabase.app/meetups.json",
         {
             method:"POST",
             body:JSON.stringify(meetupData),
@@ -12,6 +14,9 @@ function NewMeetupsPage()
             {
                 "Content-Type":"application/json"
             }
+        })
+        .then(()=>{
+            navigate("/");
         });
         
     }

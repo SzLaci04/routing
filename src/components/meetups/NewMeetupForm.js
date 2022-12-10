@@ -1,7 +1,6 @@
 import Card from "../ui/Card";
 import "./NewMeetupForm.module.css";
 import{useRef}from "react";
-import MeetupItem from "./MeetupItem";
 
 function NewMeetupForm(props)
 {
