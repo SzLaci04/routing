@@ -12,6 +12,7 @@ function AllMeetupsPage()
     .then(response=>{return response.json();})
     .then(data=>{
       const meetups=[];
+      console.log(data);
       for(const key in data)
       {
         const meetup={
@@ -19,6 +20,7 @@ function AllMeetupsPage()
           ...data[key] 
         }
         meetups.push(meetup);
+        console.log(key);
       }
       setIsLoading(false);
       setLoadedMeetups(meetups)
