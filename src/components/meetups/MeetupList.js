@@ -12,7 +12,8 @@ function MeetupList(props)
                 title={meetup.title}
                 address={meetup.address} 
                 description={meetup.description}
-            />)}
+            />
+            )}
         </ul>
     );
 }
